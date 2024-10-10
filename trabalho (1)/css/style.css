@@ -1,0 +1,458 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #040515;
+    min-width:600px;
+    max-width:2000px;
+    
+}
+
+
+header{
+    z-index: 9999999999;
+    position: fixed;
+    width: 100%;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: #02163C;
+    color: #02163C;
+    background: #02163C;
+}
+
+nav a{
+    color: #fff;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    display: inline-block;
+    z-index: 9999999999;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 9999999999;
+}
+
+a:hover {
+    opacity: 0.7;
+    z-index: 9999999999;
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    z-index: 9999999999;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    z-index: 9999999999;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 9999999999;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+    z-index: 9999999999;
+}
+
+.mobile-menu div:nth-child(1) {
+    transform: rotate(0deg);
+}
+@media (max-width: 9999px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav {
+        position: fixed;
+        display: flex;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 8vh;
+        right: 0;
+        width: 20vw;
+        height: 92vh;
+        background: #02163C;
+        flex-direction: column;
+        align-items: left;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 9999999999;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+        z-index: 9999999999;
+    }
+
+    .mobile-menu {
+        display: block;
+        z-index: 9999999999;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+    z-index: 9999999999;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+.col-100{
+    position: relative;
+    z-index: 999999999;
+    background-color: #09062B;
+}
+
+button.slick-prev{
+   display: inline-block;
+   font-size: 0px;
+   border: none;
+   width: 150px;
+   height: 100px;
+   background-color: transparent;
+   z-index: 999999999999;
+}
+.slick-next:before,
+.slick-prev:before {
+    font-family: slick;
+    font-size: 60px;
+    line-height: 1;
+    opacity: .90;
+    color: rgb(255, 255, 255);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button.slick-next{
+    display: inline-block;
+    font-size: 0px;
+    border: none;
+    width: 150px;
+    height: 100px;
+    background-color: transparent;
+    z-index: 999999999999;
+}
+
+.slider-text{
+    width: 100%!important;
+}
+
+.slick-initialized{
+    overflow: hidden;
+}
+ul.slick-dots {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    list-style: none;
+    text-align: center;
+    bottom: 0%;
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 30px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 999999999;
+}
+.slick-dots li button::before {
+    font-family: slick;
+    font-size: 20px;
+    line-height: 32px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    content: "•";
+    text-align: center;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    -webkit-font-smoothing: antialiased;
+    z-index: 999999999;
+}
+
+.slick-dots li.slick-active button::before {
+    color: rgb(255, 255, 255)
+}
+
+.texto-destaque h1{
+    text-transform: uppercase;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 50px;
+    z-index: 999999999;
+}
+
+.texto-destaque p{
+    text-align: center;
+    color: #fff;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999999999;
+}
+.content-burro{
+    background-color: #040515;
+    text-align: center; 
+
+}
+
+.col-3{
+    text-align: center;
+    align-items: center;
+    color: aliceblue;
+    width: 40%;
+    display: inline-table;
+    height: 450px;
+    position: relative;
+    border: 3px solid #fff;
+    border-radius: 15%;
+    background: #09062B;
+    margin: 30px;
+    padding-top: 30px;
+}
+
+
+.col-3 p{
+    text-align: center;
+    padding: 5px;
+
+}
+
+.content{
+    background-color: #040515;
+    text-align: center;
+}
+
+.col-5{
+    text-align: center;
+    align-items: center;
+    margin-top: 80px;
+    color: aliceblue;
+    width: 500px;
+    position: relative;
+    border: 3px solid #09062B;
+    background-color: #09062B;
+    border-radius: 20%;
+    display: inline-block;
+    margin: 100px;
+    padding: auto;
+
+}
+
+.col-5 img{
+    border-radius: 20%;
+    width: 500px;
+    background-repeat: no-repeat;
+background-position: center;
+    
+
+}
+
+.col-6{
+    text-align: center;
+    align-items: center;
+    margin-top: 80px;
+    color: aliceblue;
+    width: 600px;
+    position: relative;
+    border: 3px solid #09062B;
+    background-color: #09062B;
+    border-radius: 20%;
+    display: inline-block;
+    margin: 30px;
+    padding: auto;
+}
+
+.col-6 img{
+    border-radius: 20%;
+    position: relative;
+}
+
+.linha-de-espaço{
+    border-radius: 20px;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.linha-de-espaço h2{
+    text-align: center;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    color: aliceblue;
+    position: relative;
+    height: 40px;
+    display: inline-block;
+}
+
+.seta-para-baixo{
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-50 img{
+    border: 3px solid #fff;
+    border-radius: 30%;
+}
+
+.col-50{
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.col-20{
+    margin-left: 50px;
+    color: aliceblue;
+}
+
+.col-30 img{
+    border-radius: 20%;
+    padding: 50px;
+}
+
+.col-30 td{
+    font-size: 20px;
+    padding-right: 50px;
+    color: aliceblue;
+}
+
+.col-5 button {
+    display: inline-block;
+    border-radius: 30px;
+    background-color: aliceblue;
+    border: none;
+    color: #040515;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.col-5 button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.col-5 button span:after {
+    content: '→';
+    /* CSS Entities. To use HTML Entities, use →*/
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.col-5 button:hover span {
+    padding-right: 25px;
+}
+
+.col-5 button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.col-6 button{
+    display: inline-block;
+        border-radius: 30px;
+        background-color: aliceblue;
+        border: none;
+        color: #040515;
+        text-align: center;
+        font-size: 25px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+}
+
+.col-6 button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.col-6 button span:after {
+    content: '→';
+    /* CSS Entities. To use HTML Entities, use →*/
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.col-6 button:hover span {
+    padding-right: 25px;
+}
+
+.col-6 button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
